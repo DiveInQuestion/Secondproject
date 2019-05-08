@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
+	android:gravity="center_horizontal">
+
+	<com.baidu.mapapi.map.MapView
+		android:id="@+id/mapView"
+		android:layout_width="fill_parent"
+		android:layout_height="500dp"
+		android:enabled="true"
+		android:clickable="false"
+		android:layout_below="@+id/header" />
+
+	<LinearLayout
+		android:id="@+id/header"
+		android:layout_width="fill_parent"
+		android:layout_height="35dp"
+		android:background="@drawable/radar_header"
+		android:layout_alignParentTop="true"
+		android:orientation="horizontal" />
+
+<FrameLayout
+	android:id="@+id/vgp_center"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:layout_below="@+id/header">
+		<RelativeLayout
+			android:paddingTop="10dp"
+			android:layout_height="match_parent"
+			android:layout_width="fill_parent">
+		</RelativeLayout>
+
+	<RelativeLayout
+        android:paddingTop="10dp"
+        android:background="@drawable/centre_radar"
+        android:layout_width="wrap_content"
+        android:layout_height="443dp">
+    <Button
+        android:id="@+id/btn_locate"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/button_locate_def"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true" />
+
+    <ToggleButton
+        android:id="@+id/btn_refresh"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/button_refresh_def"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:textOff=""
+        android:textOn="" />
+
+		<ImageView
+            android:id="@+id/imageview_sweep"
+			android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:src="@drawable/radar_sweep"
+			android:layout_marginTop="39dp"
+			android:layout_below="@+id/btn_locate"
+			android:layout_toRightOf="@+id/btn_locate"
+			android:layout_toEndOf="@+id/btn_locate"
+			android:visibility="invisible"/>
+	</RelativeLayout>
+</FrameLayout>
+
+	<RelativeLayout android:id="@+id/empty_filler" android:layout_width="fill_parent"
+		android:background="@drawable/list_footer"
+		android:layout_height="fill_parent"  android:layout_below="@id/vgp_center"/>
+	<RelativeLayout android:id="@+id/vgp_footer"
+		android:layout_width="fill_parent" android:layout_height="wrap_content"
+		android:background="@drawable/list_footer" android:layout_alignParentBottom="true">
+
+		<Button android:id="@+id/btn_enemies" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:background="@drawable/button_enemies_def"
+			android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+
+		<Button android:id="@+id/btn_friends" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:background="@drawable/button_friends_def"
+			android:layout_alignParentLeft="true"
+			android:layout_alignParentStart="true"
+			android:layout_alignTop="@+id/btn_enemies" />
+
+	</RelativeLayout>
+</RelativeLayout>
